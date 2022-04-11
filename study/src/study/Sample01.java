@@ -3,6 +3,7 @@ package study;
 public class Sample01 {
 
 	public static void main(String[] args) {
+		
 		public void ex01() {
 			int x = 2;
 			int y = 5;

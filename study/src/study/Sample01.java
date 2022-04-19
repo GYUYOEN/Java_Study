@@ -13,7 +13,7 @@ public class Sample01 {
 			System.out.println(x += 2); 					// 3 + 2 = 5
 			System.out.println(!('A' <= c && c <= 'Z'));	// 'A' <= c : true, c <= 'Z' : true, true && true = true, !true = false 
 			System.out.println('C' - c);					// 67 - 65 = 2
-			System.out.println('5' - '0');					// 53-48 = 5	
+			System.out.println('5' - '0');					// 53 - 48 = 5
 			System.out.println(c + 1);						// 65 + 1 = 66
 			System.out.println(++c);						// 65 + 1 = 66 -> 'B'
 			System.out.println(c++);						// 65 + 1 이지만 65 -> 'B', 그 다음 'B'+ 1 = 'C'
@@ -83,14 +83,14 @@ public class Sample01 {
 		
 		public void ex09() {
 			char ch = 'z';
-			boolean b = ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9') ? true : false);
+			boolean b = ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9'));
 			System.out.println(b);
 		}
 		
 		public void ex10() {
 			char ch = 'A';
 			
-			char lowerCase = (ch >= 'A' && 90 <= 'Z') ? (char)((int)ch + 32) : ch;
+			char lowerCase = (ch >= 'A' && ch <= 'Z') ? (char)(ch + 32) : ch;
 			
 			System.out.println("ch : " + ch);
 			System.out.println("ch to lowerCase : " + lowerCase);
@@ -107,8 +107,8 @@ public class Sample01 {
 //			sample.ex06();
 //			sample.ex07();
 //			sample.ex08();
-			sample.ex09();
-//			sample.ex10();
+//			sample.ex09();
+			sample.ex10();
 		}
 
 }

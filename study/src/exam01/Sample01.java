@@ -1,4 +1,4 @@
-package study;
+package exam01;
 
 public class Sample01 {
 		

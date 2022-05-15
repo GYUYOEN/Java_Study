@@ -1,4 +1,4 @@
-package study;
+package exam01;
 
 import java.util.Random;
 
@@ -19,17 +19,24 @@ public class Sample03 {
 	}
 	
 	public void ex02() {
-		for(int i = 1; i <= 9; i++) {
-			for(int j = 1; j <= 3; j++) {
-				int x = j + 1 + (i - 1) / 3 * 3;;
-				int y = i % 3 == 0 ? 3 : i % 3;
-				
-				if(x > 9) break;
-				
-				System.out.print(x + " * " + y + " = " + x*y + "\t");
+//		for(int i = 1; i <= 9; i++) {
+//			for(int j = 1; j <= 3; j++) {
+//				int x = j + 1 + (i - 1) / 3 * 3;;
+//				int y = i % 3 == 0 ? 3 : i % 3;
+//				
+//				if(x > 9) break;
+//				
+//				System.out.print(x + " * " + y + " = " + x*y + "\t");
+//			}
+//			System.out.println();
+//			if(i % 3 == 0) System.out.println();	
+//		}
+		
+		for(int i = 1; i <= 3; i++) {
+			for(int j = 2; j <= 9; j++) {
+				System.out.printf("%d * %d = %d\t", j, i, i*j);
 			}
 			System.out.println();
-			if(i % 3 == 0) System.out.println();	
 		}
 	}
 	
@@ -232,13 +239,13 @@ public class Sample03 {
 	public static void main(String[] args) {
 		Sample03 sample = new Sample03();
 //		sample.ex01();
-//		sample.ex02();
+		sample.ex02();
 //		sample.ex03();
 //		sample.ex04();
 //		sample.ex05();
 //		sample.ex06();
 //		sample.ex07();
 //		sample.ex08();
-		sample.ex09();
+//		sample.ex09();
 	}
 }

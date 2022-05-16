@@ -24,6 +24,7 @@ class Buyer {
 	void buy(Product p) {
 		if(this.money < p.price) {
 			System.out.println("잔액이 부족합니다.");
+			return;
 		} else if(this.money >= p.price) {
 			this.money -= p.price;
 			this.add(p);
@@ -35,7 +36,7 @@ class Buyer {
 	void add(Product p) {
 		if(i >= cart.length) {
 			Product[] ncart = new Product[cart.length*2];
-			for(int i = 0; i < ncart.length; i++) {
+			for(int i = 0; i < cart.length; i++) {
 				ncart[i] = cart[i];
 			}
 			cart = ncart;

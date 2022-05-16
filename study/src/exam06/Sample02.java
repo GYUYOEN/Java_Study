@@ -2,20 +2,33 @@ package exam06;
 
 class Sample02 {
 	
-	static void action(Robot r) {
-		DanceRobot dcr = new DanceRobot();
-		SingRobot sr = new SingRobot();
-		DrawRobot dr = new DrawRobot();
-
-		if(r == dcr) {
-			dcr.dance();
-		} else if(r == sr) {
+	public static void action(Robot r) {
+		if(r instanceof DanceRobot) {
+			DanceRobot dr = (DanceRobot)r;
+			dr.dance();
+		} else if(r instanceof SingRobot) {
+			SingRobot sr = (SingRobot)r;
 			sr.sing();
-		} else if(r == dr) {
+		} else if(r instanceof DrawRobot) {
+			DrawRobot dr = (DrawRobot)r;
 			dr.draw();
 		} else {
 			System.out.println("잘못입력");
 		}
+		
+//		DanceRobot dcr = new DanceRobot();
+//		SingRobot sr = new SingRobot();
+//		DrawRobot dr = new DrawRobot();
+//
+//		if(r == dcr) {
+//			dcr.dance();
+//		} else if(r == sr) {
+//			sr.sing();
+//		} else if(r == dr) {
+//			dr.draw();
+//		} else {
+//			System.out.println("잘못입력");
+//		}
 	}
 
 	public static void main(String[] args) {

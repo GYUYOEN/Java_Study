@@ -8,23 +8,24 @@ public class Sample01 {
 abstract class Unit {
 	int x, y; // 현재 위치
 	abstract void move(int x, int y);
-	abstract void stop();
+//	abstract void stop(); 
+	void stop() {}
 }
 
 class Marine extends Unit { // 보병
 	void move(int x, int y) {}
-	void stop() {}
+//	void stop() {}
 	void stimPack() {}
 }
 
 class Tank extends Unit { // 탱크
 	void move(int x, int y) {}
-	void stop() {}
+//	void stop() {}
 	void changeMode() {}
 }
 
 class Dropship extends Unit { // 수송선
 	void move(int x, int y) {}
-	void stop() {}
+//	void stop() {}
 	void unload() {}
 }

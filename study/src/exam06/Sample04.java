@@ -35,7 +35,7 @@ abstract class Shape {
 
 }
 
-class Point {
+class Point { // 시작위치
 	int x;
 	int y;
 	
@@ -57,17 +57,23 @@ class Circle extends Shape {
 	static final double PI = 3.14;
 	double r;
 	
-	Circle() {
-		this(0);
-	}
+//	Circle() {
+//		this(0);
+//	}
 	
 	Circle(double r) {
+		this(new Point(0, 0), r);
+//		this.r = r;
+	}
+	
+	Circle(Point p, double r) {
+		super(p); // shape의 new point(0, 0) 으로 초기화
 		this.r = r;
 	}
 	
 	@Override
 	double calcArea() {
-		 double result = r * r * PI; 
+		double result = r * r * PI; 
 		return result;
 	}
 	

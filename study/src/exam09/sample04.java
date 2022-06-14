@@ -3,7 +3,12 @@ package exam09;
 public class sample04 {
 
 	static void printGraph(int[] dataArr, char ch) {
-		
+		for(int i=0; i < dataArr.length; i++) {
+			for(int j=0; j < dataArr[i]; j++) {
+				System.out.print(ch);
+			}
+			System.out.println(dataArr[i]);
+		}
 	}
 
 	public static void main(String[] args) {

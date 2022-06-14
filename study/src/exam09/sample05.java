@@ -7,15 +7,15 @@ public class sample05 {
 		int pos = 0; // 찾기 시작할 위치
 		
 		for(int i = 0; i < src.length();) {
-			pos = src.indexOf(target, i);
+			pos = src.indexOf(target, pos);
 			
-			if(pos == -1) {
+			if(pos != -1) {
+				count++;
+				pos += target.length();
+			} else {
 				break;
-			} 
+			}
 			
-			count++;
-			i += pos;
-			i += target.length();
 		}
 		return count;
 	}

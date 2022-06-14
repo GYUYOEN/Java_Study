@@ -3,11 +3,14 @@ package exam09;
 public class sample07 {
 	
 	public static boolean contains(String src, String target) {
-		if(src.contains(target)) {
-			return true;
-		}
+//		if(src.contains(target)) {
+//			return true;
+//		}
+//		
+//		return false;
 		
-		return false;
+		return src.indexOf(target)!=-1;
+
 	}
 	
 	public static void main(String[] args) {

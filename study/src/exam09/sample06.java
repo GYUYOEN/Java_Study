@@ -18,21 +18,26 @@ public class sample06 {
 			c[i] = '0';
 		}
 		
-		char[] temp = new char[src.length()];
-		for(int i = 0; i < src.length(); i++) {
-			temp[i] = src.charAt(i);
-		}
+//		char[] temp = new char[src.length()];
+//		for(int i = 0; i < src.length(); i++) {
+//			temp[i] = src.charAt(i);
+//		}
+//		
+//		for(int i = 0; i < src.length(); i++) {
+//			c[length - src.length() + i] = temp[i];
+//		}
+//		
+//		String s = "";
+//		for(int i = 0; i < length; i++) {
+//			s += c[i];
+//		}
+//		
+//		return s;
 		
-		for(int i = 0; i < src.length(); i++) {
-			c[length - src.length() + i] = temp[i];
-		}
+		System.arraycopy(src.toCharArray(), 0, c, length-src.length(), src.length());
 		
-		String s = "";
-		for(int i = 0; i < length; i++) {
-			s += c[i];
-		}
-		
-		return s;
+		return new String(c);
+
  	}
 	
 	public static void main(String[] args) {

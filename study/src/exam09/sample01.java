@@ -30,11 +30,25 @@ class SutdaCard {
 		멤버변수 num, isKwang을 비교하도록 오버라이딩 하시오.
 		*/
 		if(obj instanceof SutdaCard) {
-			return num == ((SutdaCard)obj).num;
+			SutdaCard c = (SutdaCard)obj;
+			return num==c.num && isKwang==c.isKwang;
+			// return num == ((SutdaCard)obj).num;
 		} else {
 			return false;
 		}
 	}
+	
+//	public boolean equals(Object obj) {
+//        if(obj instanceof SutdaCard) {    // 만약 obj가 SutdaCard클래스참조변수라면
+//            if(this.num != ((SutdaCard) obj).num ) {    //
+//                return false;
+//            }
+//            if(this.isKwang != ((SutdaCard) obj).isKwang ) {
+//                return false;
+//            }
+//        }
+//        return true;
+//	}
 	
 	public String toString() {
 		return num + ( isKwang ? "K":"");

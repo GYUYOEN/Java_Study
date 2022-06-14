@@ -29,11 +29,18 @@ class Point3D {
 		/*
 			(1) 인스턴스변수 x, y, z를 비교하도록 오버라이딩하시오.
 		 */
+//		if(obj instanceof Point3D) {
+//			return x == ((Point3D)obj).x;
+//		} else {
+//			return false;
+//		}
+		
 		if(obj instanceof Point3D) {
-			return x == ((Point3D)obj).x;
-		} else {
-			return false;
+			Point3D p = (Point3D)obj;
+			return x == p.x && y == p.y && z == p.z;
 		}
+		return false;
+
 	}
 	public String toString() {
 		/*

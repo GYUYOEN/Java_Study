@@ -15,6 +15,9 @@ public class Sample06 {
 			set.add((int)(Math.random()*30)+1+"");
 		}
 		
+//		ArrayList list = new ArrayList(set);
+//		Collections.shuffle(list);
+		
 		Iterator it = set.iterator();
 		
 		for(int i=0; i < board.length; i++) {

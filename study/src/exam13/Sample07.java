@@ -37,7 +37,6 @@ class SutdaCard {
 	}
 }
 
-
 public class Sample07 {
 	public static void main(String[] args) {
 		SutdaCard c1 = new SutdaCard(3,true);

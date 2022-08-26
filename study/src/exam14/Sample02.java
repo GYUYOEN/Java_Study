@@ -19,13 +19,10 @@ public class Sample02 {
 		
 		TreeMap rank = new TreeMap(new Comparator(){
 			public int compare(Object o1, Object o2) {
-				if(o1 instanceof Map.Entry && o2 instanceof Map.Entry) {
-					Player p1 = (Player)o1;
-					Player p2 = (Player)o2;
-					
-					return p1.point == p2.point ? 0 : (p1.point < p2.point) ? -1 : 1;
-				}
-				return 0;
+				Player1 p1 = (Player1)o1;
+				Player1 p2 = (Player1)o2;
+				
+				return p1.point == p2.point ? 0 : (p1.point < p2.point ? 1 : -1);				
 			}
 		});
 		
@@ -36,8 +33,9 @@ public class Sample02 {
 		}
 		
 		System.out.println();
-		System.out.println("1 "+rank.firstKey()+" ."); 
+		System.out.println("1위는 "+rank.firstKey()+" 입니다."); 
 	}
+}
 	
 class SutdaDeck1
 {
@@ -156,7 +154,3 @@ class SutdaCard1 {
 	}
 }
 
-
-
-
-}

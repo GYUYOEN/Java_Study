@@ -40,7 +40,7 @@ public class Sample03 {
 		
 		while(true) {
 			System.out.print("원하는 메뉴를 선택하세요.(1~3) : "); 
-			menu = s.nextInt(); s.nextLine();
+			menu = Integer.parseInt(s.nextLine());
 			if(!(menu <= 3 && menu >= 1)) {
 				System.out.println("메뉴를 잘못 선택하셨습니다. 다시 입력해주세요.");
 			} else {
@@ -60,18 +60,19 @@ public class Sample03 {
 		while(true) {
 			System.out.print(">>");
 			
-			Scanner s2 = new Scanner(System.in);
-			String input = s2.nextLine().trim();
+			String input = s.nextLine().trim();
 			
 			String[] str = input.split(",");
 			
 			if(input.equals("q") || input.equals("Q")) {
-				displayMenu();
+//				displayMenu();
+				return;
+			} else {
+				Student st = new Student(str[0], Integer.parseInt(str[1]), Integer.parseInt(str[2]), 
+						Integer.parseInt(str[3]), Integer.parseInt(str[4]), Integer.parseInt(str[5]));
+				record.add(st);
+				System.out.println("잘입력되었습니다. 입력을 마치려면 q를 입력하세요.");
 			}
-			
-			Student st = new Student(str[0], Integer.parseInt(str[1]), Integer.parseInt(str[2]), Integer.parseInt(str[3]), Integer.parseInt(str[4]), Integer.parseInt(str[5]));
-			record.add(st);
-			System.out.println("잘입력되었습니다. 입력을 마치려면 q를 입력하세요.");
 			
 		} // end of while
 	} // public static void inputRecord() {

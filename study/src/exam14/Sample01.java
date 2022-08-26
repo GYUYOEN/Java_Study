@@ -74,14 +74,25 @@ class SutdaDeck
 		if(c1.isKwang && c2.isKwang) {
 			result = (Integer)jokbo.get("KK");
 		} else {
-			result = (Integer)jokbo.get(String.valueOf(c1.num + c2.num));
-		}
+			result = (Integer)jokbo.get(""+c1.num + c2.num);
 		
-		if(result == null) {
-			result = new Integer((c1.num + c2.num) % 10 + 1000);
+			if(result == null) {
+				result = new Integer((c1.num + c2.num) % 10 + 1000);
+			}
 		}
 		
 		p.point = result.intValue();
+		
+		// 보슬이
+//		if(c1.isKwang && c2.isKwang) {
+//			result = (Integer)jokbo.get("KK");
+//			p.point = result;
+//			return result;
+//		}
+//		
+//		Integer defaultValue = (c1.num + c2.num) % 10 +1000;
+//		result = (int) jokbo.getOrDefault(String.valueOf(c1.num) + String.valueOf(c2.num), defaultValue);
+//		p.point = result;
 		
 		return result.intValue();
 	}
